@@ -1,0 +1,406 @@
+.body {
+    max-width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+.a {
+    text-decoration: none!important;
+    text-decoration-line: none !important;
+}
+.story img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover; /* Maintain aspect ratio */
+    border: 2px solid #007bff; /* Add a border */
+    border: 2px solid radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+}
+
+.story p, .story1 p {
+    font-size: 14px;
+    margin-top: 5px;
+    color: #333;
+}
+.fas.fa-heart {
+color: red;
+}
+.navbar-custom {
+background-color: white; /* Light background color for the navbar */
+position: fixed; /* Fixes the navbar at the top */
+top: 0; /* Keeps the navbar at the top of the page */
+width: 100%; /* Full width */
+z-index: 1; /* Ensures the navbar stays above other content */
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for better visibility */
+overflow-x: hidden; /* Prevent horizontal scrolling */
+padding: 0 10px; /* Add padding for better appearance on mobile */
+}
+.navbar-brand img {
+    width: 80px; /* Adjust logo size */
+}
+.search-container {
+    position: relative;
+    display: flex; /* Use flex to keep elements aligned */
+    align-items: center; /* Center align items */
+}
+.form-control {
+    background-color: rgb(223, 223, 223);
+    border: none;
+    height: 32px;
+    width: 220px; /* Ensure fixed width for the search bar */
+    padding-left: 35px; /* Space for the search icon */
+    padding-right: 40px; /* Space for the search button */
+}
+.search-icon {
+    position: absolute;
+    left: 10px; /* Position icon inside the search bar */
+    transform: translateY(-50%);
+    color: gray;
+    top: 10px;
+}
+/* Horizontal line (hr) styling */
+.search-hr {
+    border-top: 1px solid gray; /* Add a solid border to be visible */
+    width: 100%; /* Full width */
+    position: sticky;    
+}
+
+/* Hide the navbar and hr for screen widths larger than 800px */
+@media (min-width:900px) {
+    .navbar.navbar-custom ,.navbar-bottom{
+        display: none !important; /* Hide navbar */
+    }
+    /* Show the navbar on the left side as a vertical bar */
+    .navbar-bottom {
+        display: flex !important;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 60px; /* Adjust width of the side navbar */
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: white;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Arrange icons in a vertical direction */
+    .navbar-bottom,.icon-bar {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 100%;
+        padding: 20px 0;
+        bottom: 0;
+        left: 0;
+    }
+    /* Show extra icons only on larger screens */
+    .extra-icons{
+        display: block;
+    }
+
+    /* Remove the horizontal rule in search */
+    .search-hr,.iconname {
+        display: none !important;
+    }
+}
+
+
+/* Show the navbar and hr for screen widths smaller than 800px */
+@media only screen and (max-width:899.98px){
+    .navbar-custom {
+        padding: 10px; /* Adjust padding for small screens */
+    }
+    .navbar.navbar-custom ,.navbar-bottom{
+        display: block !important; /* Show navbar */
+        
+    }
+    .search-container {
+        width: 100%;  /* Ensure the search container is fully responsive */
+    }
+    .sideiconbox{
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        align-items: center;
+        justify-content: center;
+    }
+    .iconname{
+        display: none;
+    }
+
+    .form-control {
+        max-width: 100%; /* Ensure search bar is 100% width on small screens */
+    }
+
+    .search-hr {
+        display: block !important; /* Show hr */
+        
+    }
+    .a{
+        text-decoration: none;
+    }
+    /* Hide extra icons by default on smaller screens */
+    .extra-icons,.iconname,.sideiconinsta,.suggestion {
+    display: none!important;
+    }
+
+    /* Bottom Navbar (fixed at the bottom) */
+    .navbar-bottom {
+        background-color: white;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        z-index: 1;
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for better visibility */
+        display: flex;
+    }
+
+    .navbar-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+        padding-top: 10px;
+    }
+
+    .navbar-bottom i {
+        font-size: 20px;
+        color:black;
+    }
+
+    .navbar-bottom i:hover {
+        color: #007bff;
+    }
+    /* Prevent horizontal scrolling */
+    body, html {
+        overflow-x: hidden;
+    }
+}
+@media (min-width: 1000px) {
+    /* Prevent horizontal scrolling */
+    body {
+        overflow-x: hidden;
+    }
+    .container-fluid,.suggestion{
+        max-width: 100%;
+    }
+    .navbar-bottom{
+        width: 150px  !important;
+    }
+    .stories-wrapper{
+        margin-left: 100px;
+    }
+    .post-section{
+        margin-left: 140px;
+    }
+    .sideicon{
+        gap:10px;
+    }
+    .iconname{
+        font-size: 13px;
+        display: block !important; /* Hide navbar */
+        align-items: center;
+    }
+    .instaicon{
+        display: none !important;
+    }   
+    .stories-container{
+        margin-left: 200px;
+    }
+    .post-section{
+        margin-left: 220px !important;
+        margin-top: 40px;
+    }
+    .post-content{
+        margin-left: 220px !important;
+        margin-top: 40px;
+    }
+    .suggestion-box {
+        margin-top: 20px;
+        background-color: #f1f1f1;
+        padding: 20px;
+    } /* Right side suggested user list */
+    
+.suggestion {
+    top:60px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align stories from the left */
+    align-items: flex-start;
+    gap: 20px; /* Space between the profile and suggestion sections */
+    margin-left: 900px;
+    padding: 10px;
+    }
+    
+    .myprofile-section {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    }
+
+    .myprofile {
+    margin-left: 10px;
+    }
+    
+    .username a {
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    }
+    
+    .name a {
+    font-size: 14px;
+    color: gray;
+    text-decoration: none;
+    }
+    
+    .switch a {
+    font-size: 12px;
+    color: rgb(49, 143, 197);
+    margin-left: 120px; 
+    text-decoration: none; 
+    }
+    
+    .people {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    gap: 10px;
+    width: 300px;
+    }
+    .people span{
+    color: gray;
+    }
+    .suggested-header a {
+    font-size: 12px;
+    color: rgb(49, 143, 197);
+    margin-left: 130px;
+    margin-top: 20px;  
+    text-decoration: none;  
+    }
+    
+    .see-all {
+    font-size: 12px;
+    color: black;
+    text-decoration: none;
+    margin-left: 46px;
+    }
+    
+    .lists {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-decoration: none; 
+    }
+    .suggestion-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    }
+    .suggestedname{
+    color: black;
+    font-weight: bold;
+    }
+    .sideiconbox{
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px;
+        gap: 25px;
+    }
+    .sideicon{
+        display: flex; 
+        flex-direction:row; 
+        gap:10px"
+
+    }
+    .suggestion-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 20px;
+    }
+    .action-button {
+    font-size: 14px;
+    color: rgb(35, 158, 230);
+    margin-left: auto;  
+    border: none;
+    background: none;
+    cursor: pointer;
+    text-decoration: none;
+    }
+    .action-button:hover {
+    color: #45a049; /* Changes button color when hovered */
+    }
+    .home-links-container a{
+    margin-top: 30px;
+    font-size: 12px;
+    color: gray;
+    gap: 15px;
+    text-decoration: none; 
+    }
+    .home-links-container p{
+    margin-top: 40px;
+    }
+}   
+@media (max-width: 1099px) {
+    .instaicon{
+        display: block;
+    }
+    .sideiconinsta img{
+        display: none;
+    }
+}
+/* Mobile phones in portrait mode */
+/* Ensure no horizontal scrolling */
+
+/* Set the height for the main content area */
+.main-content {
+    padding-top: 60px; /* Adjust based on top navbar height */
+    padding-bottom: 60px; /* Adjust based on bottom navbar height */
+    height: 100vh; /* Full viewport height */
+    box-sizing: border-box; /* Ensure padding doesn't cause overflow */
+}
+.comment input{
+    border: none; /* Remove any border */
+    outline: none; /* Remove the focus outline */
+    background-color: none;
+}
+
+/* Optional: styling for the content to demonstrate scrolling */
+.content-wrapper {
+    max-height: 100%; /* Ensure content fits within available space */
+}
+
+.content {
+    padding: 20px; /* Add padding to your content */
+}
+.stories-container{
+    display: flex !important;
+    flex-direction: row!important ;
+    gap: 10px;
+    overflow: hidden;
+    overflow-x: auto;
+}
+.profile-pic {
+width: 50px;
+height: 50px;
+border-radius: 50%;
+}
+.post-content {
+    display: flex !important;
+    flex-direction: column!important ;
+    gap: 10px;
+    overflow: hidden;
+    overflow-x: none;
+}
+.post-content img {
+    width: 300px;
+    height: 700px;
+}
+.suggestedname a,.story a{
+    text-decoration: none!important;
+}
